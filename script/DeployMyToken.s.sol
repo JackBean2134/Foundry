@@ -6,11 +6,8 @@ import "../src/MyTokenERC20.sol";
 
 contract DeployMyToken is Script {
     function run() external {
-        uint256 deployerPrivateKey = vm.envUint("PRIVATE_KEY");
-        vm.startBroadcast(deployerPrivateKey);
-
+        vm.startBroadcast(); // 不带参数，由命令行传入账户签名
         new MyToken("MyToken", "MTK");
-
         vm.stopBroadcast();
     }
 }

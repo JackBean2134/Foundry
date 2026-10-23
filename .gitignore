@@ -20,4 +20,5 @@ docs/
 !.env.example
 
  #keystores
-keystores/
+keystores/broadcast/
+lib/
